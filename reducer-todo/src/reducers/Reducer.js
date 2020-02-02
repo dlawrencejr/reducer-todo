@@ -1,13 +1,31 @@
-export const initalState = {
-    todos:[{
+export const initialState = [{
+   
         task:'Learn about reducers',
         completed:false,
-        id:1
+        id:Math.random()
     }]
-};
 
-export const todoReducer = (state) =>{
-    return {
-        count:state.count + 1
+
+export const todoReducer = (state,action) =>{
+    switch(action.type){
+        case 'ADD-TODO':
+            return[
+                ...state,
+                action.payload
+            ]
+        case 'COMPLETE-TODO':
+            return state.map((item)=>{
+                return item.id === action.payload ?
+                {
+                    ...item,completed: !item.completed
+                }
+                : item
+            })
+        case 'CLEAR-COMPLETED':
+            return state.filter((item)=> !item.completed)
+
+        default:
+            return state
     }
+    
 };
