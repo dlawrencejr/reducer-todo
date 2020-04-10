@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  background-color: darkgrey;
+  padding: 20px;
+}
+.todo-list{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.todo-item{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+color:white;
+margin: 25px;
+padding: 10px;
+}
+.complete {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  color: black;
+}
+.submit-button{
+  font-size: 20px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+}
+.clear-button{
+  font-size: 20px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+
+}
+input{
+  font-size: 25px;
+}
